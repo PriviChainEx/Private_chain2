@@ -21,7 +21,7 @@ const stackrConfig: StackrConfig = {
     accounts: [
       {
         privateKey:
-          "<APP-OPERATOR-KEY>",
+          "8abc0937c761587ab95a76ebfaa1abc844a0667a185c153ad965b1e018abf2f5",
         purpose: KeyPurpose.BATCH,
         scheme: SignatureScheme.ECDSA,
       },
