@@ -18,7 +18,7 @@ export interface privchain1ActionInput {
   amount: number;
 }
 
-export class Privchain1sell extends RollupState<StateVariable, StateTransport> {
+export class Privchain2buy extends RollupState<StateVariable, StateTransport> {
   constructor(assets: StateVariable) {
     super(assets);
   }
@@ -39,10 +39,10 @@ export class Privchain1sell extends RollupState<StateVariable, StateTransport> {
   }
 }
 
-export const privchain1STF: STF<Privchain1sell, privchain1ActionInput> = {
+export const privchain2STF: STF<Privchain2buy, privchain2ActionInput> = {
   identifier: "privchain1STF",
 
-  apply(inputs: privchain1ActionInput, state: Privchain1sell): void {
+  apply(inputs: privchain2ActionInput, state: Privchain2buy): void {
     let newState = state.getState();
     const chainIndex = newState.chainID;
     let balances =newState.tokenisedAssets.has(inputs.assetId) ? newState.tokenisedAssets.get(inputs.assetId) :new Array(chainIndex).fill(0);
@@ -83,3 +83,5 @@ export const privchain1STF: STF<Privchain1sell, privchain1ActionInput> = {
 };
 
 
+
+ 
