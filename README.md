@@ -1,4 +1,4 @@
-# counter
+# PrivateChain2
 
 To install dependencies:
 
